@@ -1,9 +1,12 @@
-﻿namespace TinyUrlApi.Data
-{
-    //public class AppDbContext : DbContext
-    //{
-    //    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+﻿using Microsoft.EntityFrameworkCore;
+using TinyUrlApi.Models;
 
-    //    public DbSet<UrlMapping> Urls { get; set; }
-    //}
+namespace TinyUrlApi.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<UrlMapping> Urls { get; set; }
+    }
 }
